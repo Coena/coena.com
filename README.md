@@ -107,7 +107,7 @@ git clone https://github.com/Coena/coena.com.git
 Next, cd to the newly checked out folder
 
 ```bash
-cd coena.com-site
+cd coena.com
 ```
 
 #### Download all dependencies
