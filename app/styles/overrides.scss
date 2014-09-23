@@ -1,0 +1,171 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import 'fontawesome/font-awesome';
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
+//Bootstrap overriders and extenders
+
+// Typography
+h1 {
+    @include set(font-size, (xs: 20px, sm: 24px, md: 24px, lg: 30px) );
+}
+h5 {
+    @include set(font-size, (xs: 12px, sm: 14px, md: 14px, lg: 16px) );
+}
+
+// Green navbar
+.navbar-green {
+  background-color: $coena-green-color;
+  border-color: $coena-green-color;
+  border-radius: 0;
+  margin-bottom: 0;
+  
+  .form-control {
+    border-color: $coena-green-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $white-color;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        background-color: $coena-green-hover-color;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $coena-green-active-color;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $white-color;
+    .icon-bar {
+      background-color: $white-color;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $coena-green-color;
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $coena-green-active-color;
+      }
+    }
+    
+    .dropdown-menu {
+      background-color: $coena-green-color;
+      border-color: $coena-green-active-color;
+      > li > a {
+        color: $white-color;
+        &:hover,
+        &:focus {
+          background-color: $coena-green-hover-color;
+        }
+      }
+      
+      .divider {
+        background-color: $coena-green-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      
+      .dropdown-menu {
+        background-color: $coena-light-green-color;
+        border-color: $coena-green-active-color;
+        > li > a {
+          color: $white-color;
+          &:hover,
+          &:focus {
+            background-color: $coena-light-green-hover-color;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            background-color: $coena-light-green-hover-color;
+          }
+        }
+        .divider {
+          background-color: $coena-green-active-color;
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $white-color;
+  }
+
+  .btn-link {
+    color: $white-color;
+  }
+}
+
+//Fix input group submit button height
+.input-group {
+  .btn {
+    height: 34px;
+  }
+}
+
+//dark green buttons
+.btn-green {
+  border-color: $coena-green-color;
+  background-color: $coena-dark-green-color;
+  color: $white-color;
+  &:hover {
+    color: $white-color;
+    background-color: $coena-dark-green-hover-color;
+  }
+  &:focus {
+    color: $white-color;
+    background-color: $coena-dark-green-active-color;
+  }
+}
+
+//row with no padding for columns
+.row-no-padding {
+  margin: 0;
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+//full height row and columns {
+.row-full-height {
+  height: 100%;
+  [class*="col-"] {
+    height: 100%;
+  }
+}
+
+//extend width of accordion title link
+.panel-title {
+  > a {
+    width: 100%;
+    display: inline-block;
+  }
+}

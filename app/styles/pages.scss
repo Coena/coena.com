@@ -1,0 +1,53 @@
+/* Homepage */
+#home {
+  > .container-fluid {
+    background: url(../images/homepage.jpg) center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: '768px') { 
+  #home {
+    > .container-fluid {
+      .col-xs-12 {
+        min-height: 52px;
+      }
+    }
+  }
+  #home {
+    .row {
+      height: 100%;
+    }
+  }
+  .home-col-1 {
+    &.inactive {
+      position: absolute;
+      bottom: 104px;
+    }
+  }
+  .home-col-2 {
+    &.inactive {
+      position: absolute;
+      bottom: 52px;
+    }
+  }
+  .home-col-3 {
+    &.inactive {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+
+
+/* Products - overview */
+#products {
+  > .container-fluid {
+    background: url(../images/products.jpg) center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+}

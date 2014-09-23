@@ -1,0 +1,139 @@
+'use strict';
+/*!
+ * Responsive Bootstrap Toolkit
+ * Author:    Maciej Gurban
+ * License:   MIT
+ * Version:   2.0.0 (2014-08-23)
+ * Origin:    https://github.com/maciej-gurban/responsive-bootstrap-toolkit
+ */
+var ResponsiveBootstrapToolkit = (function($){
+  // Methods and properties
+  var self = {
+    // Determines interval between firing 'changed' method
+    interval: 300,
+    // Used to calculate intervals between consecutive function executions
+    timer: new Date(),
+    // Returns true if current breakpoint matches passed alias
+    is: function( alias ) {
+      return $('.device-' + alias).is(':visible');
+    },
+    /*
+     * Waits specified number of miliseconds before executing a function
+     * Source: http://stackoverflow.com/a/4541963/2066118
+     */
+    changed: function() {
+      var timers = {};
+      return function (callback, ms) {
+        // Get unique timer ID
+        var uID = (!uID) ? self.timer.getTime() : null;
+        if (timers[uID]) {
+          clearTimeout(timers[uID]);
+        }
+        // Use default interval if none specified
+        if(typeof ms === 'undefined') {
+          ms = self.interval;
+        }
+        timers[uID] = setTimeout(callback, ms);
+      };
+    }
+  };
+  return self;
+})(jQuery);
+
+
+
+// Your own scripts
+(function($, document, window, viewport){
+  
+  var currentDate = new Date();
+  $('#current-year').text((currentDate).getFullYear());
+
+  $('#header-search-toggle').on('click', function (e) {
+    e.preventDefault();
+    $('#header-search').toggleClass('hidden');
+  });
+
+  function updateContainer() {
+    var windowHeight = $(window).outerHeight();
+    $('#contents section').height(windowHeight - 133 + 'px');
+    $('#contents section > .container-fluid').height($('#contents section').height() + 'px');
+    if (viewport.is('sm') || viewport.is('md') || viewport.is('lg')) {
+      var colContentHeight = $('#home').height() - 145 + 'px';
+      $('#home > .container-fluid .columns-container').css('max-height', colContentHeight);
+      $('#home > .container-fluid > .row').addClass('row-full-height');
+    }
+    if (viewport.is('xs')) {
+      var smallColContentHeight = $('#home').height() - 176 + 'px';
+      $('#home > .container-fluid .columns-container').css('max-height', smallColContentHeight);
+    }
+  }
+
+  // Executes once whole document has been loaded
+  $(document).ready(function() {
+    updateContainer();
+  });
+
+  // Executes each time window size changes
+  $(window).bind('resize', function() {
+    viewport.changed(function(){
+      updateContainer();
+    });
+  });
+  
+  function resetColumnsHeading(clickedItem) {
+    $('.columns-title-container').not(clickedItem).removeClass('columns-title-container-top').addClass('columns-title-container-bottom');
+    $('.columns-title-container').not(clickedItem).find('[class*="arrow-up"]').removeClass('hidden');
+    $('.columns-title-container').not(clickedItem).find('[class*="arrow-down"]').addClass('hidden');
+    $('.columns-title-container').not(clickedItem).find('.columns-title-blue').removeClass('blue-title-border-bottom').addClass('blue-title-border-top');
+    $('.columns-title-container').not(clickedItem).find('.columns-title-green').removeClass('green-title-border-bottom').addClass('green-title-border-top');
+    $('.columns-title-container').not(clickedItem).next('.columns-container').addClass('hidden');
+  }
+  
+
+  $('.columns-title-container').on('click', function (e) {
+    e.preventDefault();
+    var clickedTitle = $(this);
+    if (viewport.is('sm') || viewport.is('md') || viewport.is('lg')) {
+      resetColumnsHeading(clickedTitle);
+
+      $(this).toggleClass('columns-title-container-bottom columns-title-container-top');
+      $(this).find('[class*="arrow-up"]').toggleClass('hidden');
+      $(this).find('[class*="arrow-down"]').toggleClass('hidden');
+      $(this).find('.columns-title-blue').toggleClass('blue-title-border-top blue-title-border-bottom');
+      $(this).find('.columns-title-green').toggleClass('green-title-border-top green-title-border-bottom');
+      $(this).next().toggleClass('hidden');
+    }
+  });
+
+  function resetSmallColumnsHeading(clickedItem) {
+    var homeColumn = $('#home').find('.columns-title-container');
+    $(homeColumn).not(clickedItem).parent().removeClass('inactive');
+    $(homeColumn).not(clickedItem).removeClass('columns-title-container-top').addClass('columns-title-container-bottom');
+    $(homeColumn).not(clickedItem).next('.columns-container').addClass('hidden');
+  }
+  
+
+  $('#home').find('.columns-title-container').on('click', function (e) {
+    e.preventDefault();
+    var clickedTitle = $(this);
+    if (viewport.is('xs')) {
+      resetSmallColumnsHeading(clickedTitle);
+
+      if($(clickedTitle).parent().hasClass('inactive')) {
+        $('#home').find('.col-xs-12').removeClass('inactive');
+      } else if (!$(clickedTitle).parent().hasClass('inactive') && !$(clickedTitle).next('.columns-container').hasClass('hidden')) {
+        $('#home').find('.col-xs-12').addClass('inactive');
+      } else if (!$(clickedTitle).parent().hasClass('inactive') && $(clickedTitle).next('.columns-container').hasClass('hidden')) {
+        $('#home').find('.col-xs-12').removeClass('inactive');
+      }
+      $(this).toggleClass('columns-title-container-bottom columns-title-container-top');
+      $(this).next('.columns-container').toggleClass('hidden');
+    }
+  });
+  
+})(jQuery, document, window, ResponsiveBootstrapToolkit);
+
+
+
+
+

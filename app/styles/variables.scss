@@ -1,0 +1,28 @@
+/* Color variables */
+$coena-blue-color: #00adee;
+$coena-blue-hover-color: darken($coena-blue-color, 6.5%);
+$coena-blue-active-color: darken($coena-blue-hover-color, 6.5%);
+$coena-green-color: #69c593;
+$coena-green-hover-color: darken($coena-green-color, 6.5%);
+$coena-green-active-color: darken($coena-green-hover-color, 6.5%);
+$coena-dark-green-color: #254534;
+$coena-dark-green-hover-color: darken($coena-dark-green-color, 6.5%);
+$coena-dark-green-active-color: darken($coena-dark-green-hover-color, 6.5%);
+$coena-light-green-color: lighten($coena-green-color, 6.5%);
+$coena-light-green-hover-color: lighten($coena-light-green-color, 6.5%);
+$coena-light-green-active-color: lighten($coena-light-green-hover-color, 6.5%);
+$white-color: #ffffff;
+
+
+//  Cross-resolution style setting
+
+// Starting viewport widths for each breakpoint
+$sm:     768px !default;
+$md:     984px !default;
+$lg:    1200px !default;
+
+// Max widths
+$xs-max: $sm - 1 !default;
+$sm-max: $md - 1 !default;
+$md-max: $lg - 1 !default;
+
