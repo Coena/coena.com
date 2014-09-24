@@ -1,3 +1,13 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import 'fontawesome/font-awesome';
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
 /* Homepage */
 #home {
   > .container-fluid {
@@ -44,10 +54,15 @@
 
 /* Products - overview */
 #products {
-  > .container-fluid {
+  background-color: $light-grey-color;
+  
+  .banner-holder {
     background: url(../images/products.jpg) center center;
     background-size: cover;
     margin: 0;
     padding: 0;
+    height: 350px;
+    box-shadow: 0 -6px 3px rgba(0,0,0,0.6) inset;
+    position: relative;
   }
 }

@@ -75,7 +75,6 @@ body {
       top: 50%;
       left: 50%;
       text-align: center;
-      @include set(margin, (xs: -44px 0 0 -102px, sm: -53px 0 0 -123px, md: -58px 0 0 -134.5px, lg: -64px 0 0 -153px) );
       span {
         background-color: $coena-green-color;
         text-transform: uppercase;
@@ -89,9 +88,24 @@ body {
   }
 }
 
+#home {
+  .section-heading {
+    @include set(margin, (xs: -44px 0 0 -102px, sm: -53px 0 0 -123px, md: -58px 0 0 -134.5px, lg: -64px 0 0 -153px) );
+  }
+}
+
+#products {
+  .section-heading {
+    @include set(margin, (xs: -19.5px 0 0 -101px, sm: -24px 0 0 -122px, md: -26.5px 0 0 -133px, lg: -29.5px 0 0 -151.5px) );
+    span {
+      margin: 0 !important;
+    }
+  }
+}
+
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  padding: 19px 0;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
@@ -190,8 +204,25 @@ a.green {
   color: $coena-green-color;
 }
 
+.m0 {
+  margin: 0;
+}
+
 .img-center {
   margin: 0 auto;
 }
 
+.spacer20 {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  line-height: 1;
+}
+
+.spacer10 {
+  margin: 0;
+  padding: 0;
+  height: 10px;
+  line-height: 1;
+}
 

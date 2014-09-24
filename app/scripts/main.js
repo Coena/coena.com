@@ -42,12 +42,13 @@ var ResponsiveBootstrapToolkit = (function($){
 
 
 
-// Your own scripts
+// Custom scripts
 (function($, document, window, viewport){
-  
+  // Add current year to footer copyright
   var currentDate = new Date();
   $('#current-year').text((currentDate).getFullYear());
 
+  // Toggle search field where needed
   $('#header-search-toggle').on('click', function (e) {
     e.preventDefault();
     $('#header-search').toggleClass('hidden');
@@ -55,16 +56,16 @@ var ResponsiveBootstrapToolkit = (function($){
 
   function updateContainer() {
     var windowHeight = $(window).outerHeight();
-    $('#contents section').height(windowHeight - 133 + 'px');
+    $('#contents section.fixed').height(windowHeight - 133 + 'px');
     $('#contents section > .container-fluid').height($('#contents section').height() + 'px');
     if (viewport.is('sm') || viewport.is('md') || viewport.is('lg')) {
-      var colContentHeight = $('#home').height() - 145 + 'px';
-      $('#home > .container-fluid .columns-container').css('max-height', colContentHeight);
-      $('#home > .container-fluid > .row').addClass('row-full-height');
+      var colContentHeight = $('#contents section').height() - 145 + 'px';
+      $('#contents section > .container-fluid .columns-container').css('max-height', colContentHeight);
+      $('#contents section > .container-fluid > .row').addClass('row-full-height');
     }
     if (viewport.is('xs')) {
-      var smallColContentHeight = $('#home').height() - 176 + 'px';
-      $('#home > .container-fluid .columns-container').css('max-height', smallColContentHeight);
+      var smallColContentHeight = $('#contents section').height() - 176 + 'px';
+      $('#contents section > .container-fluid .columns-container').css('max-height', smallColContentHeight);
     }
   }
 
@@ -106,25 +107,25 @@ var ResponsiveBootstrapToolkit = (function($){
   });
 
   function resetSmallColumnsHeading(clickedItem) {
-    var homeColumn = $('#home').find('.columns-title-container');
+    var homeColumn = $('#contents section').find('.columns-title-container');
     $(homeColumn).not(clickedItem).parent().removeClass('inactive');
     $(homeColumn).not(clickedItem).removeClass('columns-title-container-top').addClass('columns-title-container-bottom');
     $(homeColumn).not(clickedItem).next('.columns-container').addClass('hidden');
   }
   
 
-  $('#home').find('.columns-title-container').on('click', function (e) {
+  $('#contents section').find('.columns-title-container').on('click', function (e) {
     e.preventDefault();
     var clickedTitle = $(this);
     if (viewport.is('xs')) {
       resetSmallColumnsHeading(clickedTitle);
 
       if($(clickedTitle).parent().hasClass('inactive')) {
-        $('#home').find('.col-xs-12').removeClass('inactive');
+        $('#contents section').find('.col-xs-12').removeClass('inactive');
       } else if (!$(clickedTitle).parent().hasClass('inactive') && !$(clickedTitle).next('.columns-container').hasClass('hidden')) {
-        $('#home').find('.col-xs-12').addClass('inactive');
+        $('#contents section').find('.col-xs-12').addClass('inactive');
       } else if (!$(clickedTitle).parent().hasClass('inactive') && $(clickedTitle).next('.columns-container').hasClass('hidden')) {
-        $('#home').find('.col-xs-12').removeClass('inactive');
+        $('#contents section').find('.col-xs-12').removeClass('inactive');
       }
       $(this).toggleClass('columns-title-container-bottom columns-title-container-top');
       $(this).next('.columns-container').toggleClass('hidden');
