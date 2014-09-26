@@ -75,30 +75,31 @@ body {
       top: 50%;
       left: 50%;
       text-align: center;
+      @include set(width, (xs: 300px, sm: 320px, md: 360px, lg: 400px) );
+      @include set(height, (xs: 83px, sm: 101px, md: 111px, lg: 123px) );
+      @include set(margin, (xs: -41.5px 0 0 -150px, sm: -50.5px 0 0 -160px, md: -55.5px 0 0 -180px, lg: -61.5px 0 0 -200px) );
       span {
-        background-color: $coena-green-color;
+        background-color: $coena-blue-color-opacity-90;
         text-transform: uppercase;
         color: $white-color;
         display: inline-block;
-        margin-top: 5px;
         @include set(font-size, (xs: 100%, sm: 120%, md: 130%, lg: 150%) );
         @include set(padding, (xs: 10px 20px, sm: 12px 25px, md: 14px 28px, lg: 15px 30px) );
+        &:first-child {
+          margin-bottom: 5px;
+        }
       }
-    }
-  }
-}
-
-#home {
-  .section-heading {
-    @include set(margin, (xs: -44px 0 0 -102px, sm: -53px 0 0 -123px, md: -58px 0 0 -134.5px, lg: -64px 0 0 -153px) );
-  }
-}
-
-#products {
-  .section-heading {
-    @include set(margin, (xs: -19.5px 0 0 -101px, sm: -24px 0 0 -122px, md: -26.5px 0 0 -133px, lg: -29.5px 0 0 -151.5px) );
-    span {
-      margin: 0 !important;
+      &.single-line {
+        @include set(height, (xs: 39px !important, sm: 48px !important, md: 53px !important, lg: 59px !important) );
+        span {
+          &:first-child {
+            margin-bottom: 0 !important;
+          }
+        }
+        &.pushed-up-100 {
+          @include set(margin, (xs: -69.5px 0 0 -150px !important, sm: -74px 0 0 -160px !important, md: -76.5px 0 0 -180px !important, lg: -79.5px 0 0 -200px !important) );
+        }
+      }
     }
   }
 }

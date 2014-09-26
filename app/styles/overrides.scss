@@ -169,3 +169,15 @@ h5 {
     display: inline-block;
   }
 }
+
+//breadcrumb
+.breadcrumb {
+  display: inline-block;
+  > li:nth-child(2) {
+    &:before{
+      content: ": ";
+      color: $coena-green-color;
+      font-weight: 700;
+    }
+  }
+}
