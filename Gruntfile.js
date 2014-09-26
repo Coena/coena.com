@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
-
+  
   // Configurable paths
   var config = {
     app: 'app',
@@ -437,4 +437,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  
 };

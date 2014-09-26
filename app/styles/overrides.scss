@@ -181,3 +181,23 @@ h5 {
     }
   }
 }
+
+//carousel caption background
+.carousel-caption {
+  background-color: rgba(0,0,0,0.6);
+}
+
+//full height modal fixes
+.modal-dialog {
+  &.full-height-modal {
+    height: calc(100% - 60px);
+    overflow: hidden;
+    .modal-content {
+      height: 100%;
+      .modal-body {
+        height: calc(100% - 58px);
+        overflow: auto;
+      }
+    }
+  }
+}
