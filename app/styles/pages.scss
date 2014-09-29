@@ -63,7 +63,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     margin: 0;
     padding: 0;
     @include set(height, (xs: 250px, sm: 290px, md: 320px, lg: 350px) );
-    box-shadow: 0 -6px 3px rgba(0,0,0,0.6) inset;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.4) inset;
     position: relative;
     &.products-hub {
       background-image: url(../images/products-hub.jpg) !important;
@@ -73,6 +73,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     }
     &.products-features {
       background-image: url(../images/products-features.jpg) !important;
+    }
+    &.products-tech-specs {
+      background-image: url(../images/products-tech-specs.jpg) !important;
     }
   }
 }
