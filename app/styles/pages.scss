@@ -102,3 +102,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 20px 40px !important;
   margin-bottom: 20px;
 }
+
+//products galleries page trumbnail column border reset
+#product-management-gallery {
+  .thumbnail {
+    border: 0;
+  }
+}
