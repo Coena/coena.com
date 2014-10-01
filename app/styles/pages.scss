@@ -104,8 +104,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 //products galleries page trumbnail column border reset
-#product-management-gallery {
+.single-feature-gallery {
   .thumbnail {
     border: 0;
   }
+  .single-feature-items {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
 }
+

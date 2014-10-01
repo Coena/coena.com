@@ -173,7 +173,7 @@
                         <p><a rel="lightbox[group1]" href="images/application/inventory_management/view_inventory.png"><img src="images/application/inventory_management/view_inventory.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - view and browse inventory" /></a></p>
                         <p>view inventory items</p>
                       </div>
-                      <p class="text-right"><a href="#" class="btn btn-primary btn-xs">see more</a></p>
+                      <p class="text-right"><a id="inventory-management-gallery-link" href="#" class="btn btn-primary btn-xs">see more</a></p>
                     </div>
                     <div class="col-xs-12 col-md-6">
                       <p class="bold blue p0-15">Customers management</p>
@@ -185,7 +185,7 @@
                         <p><a rel="lightbox[group2]" href="images/application/sales_management/2.png"><img src="images/application/sales_management/2.png" class="img-responsive img-center img-thumbnail" alt="Customers management - my customers" /></a></p>
                         <p>my customers</p>
                       </div>
-                      <p class="text-right"><a href="#" class="btn btn-primary btn-xs">see more</a></p>
+                      <p class="text-right"><a id="customer-management-gallery-link" href="#" class="btn btn-primary btn-xs">see more</a></p>
                     </div>
                     <div class="col-xs-12 col-md-6">
                       <p class="bold blue p0-15">Suppliers management</p>
@@ -197,7 +197,7 @@
                         <p><a rel="lightbox[group3]" href="images/application/suppliers_management/my_suppliers.png"><img src="images/application/suppliers_management/my_suppliers.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - my suppliers" /></a></p>
                         <p>my suppliers</p>
                       </div>
-                      <p class="text-right"><a href="#" class="btn btn-primary btn-xs">see more</a></p>
+                      <p class="text-right"><a id="supplier-management-gallery-link" href="#" class="btn btn-primary btn-xs">see more</a></p>
                     </div>
                     <div class="col-xs-12 col-md-6">
                       <p class="bold blue p0-15">Business archive &amp; settings</p>
@@ -261,162 +261,618 @@
                     </div>
                   </div>
                   <div class="clearfix"></div>
-                  <div id="product-management-gallery" class="hidden">
+
+                  <!-- START PRODUCT MANAGEMENET IMAGES GALLERY  -->
+                  <div id="product-management-gallery" class="single-feature-gallery hidden">
                     <h3 class="blue">Product management</h3>
                     <p class="spacer10">&nbsp;</p>
-                    <div class="row">
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/basic_product.png"><img src="images/application/product_management/basic_product.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic product" /></a>
-                          <div class="caption">
-                            <p>basic product</p>
-                          </div>
-                        </div>
+                    <div class="row" class="">
+                      <div class="col-xs-12">
+                        <ul class="nav nav-pills product-management-item-filter">
+                          <li class="all active"><a href="#">all</a></li>
+                          <li class="product-item"><a href="#">basic product</a></li>
+                          <li class="fashion-item"><a href="#">fashion</a></li>
+                          <li class="instrumentation-item"><a href="#">instrumentation product</a></li>
+                          <li class="service-item"><a href="#">basic service</a></li>
+                        </ul>
+                        <p class="spacer20">&nbsp;</p>
                       </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/basic_product_manufacturers.png"><img src="images/application/product_management/basic_product_manufacturers.png" class="img-responsive img-center img-thumbnail" alt="Product management - product manufacturers" /></a>
-                          <div class="caption">
-                            <p>product manufacturers</p>
+                      <div class="clearfix"></div>
+                      <ul id="product-management-items" class="single-feature-items">
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-0" data-type="product-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/basic_product.png"><img src="images/application/product_management/basic_product.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic product" /></a>
+                            <div class="caption">
+                              <p>basic product</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/basic_product_overview.png"><img src="images/application/product_management/basic_product_overview.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic product overview" /></a>
-                          <div class="caption">
-                            <p>basic product overview</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-1" data-type="product-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/basic_product_manufacturers.png"><img src="images/application/product_management/basic_product_manufacturers.png" class="img-responsive img-center img-thumbnail" alt="Product management - product manufacturers" /></a>
+                            <div class="caption">
+                              <p>product manufacturers</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_category.png"><img src="images/application/product_management/dress_category.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress category" /></a>
-                          <div class="caption">
-                            <p>dress category</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-2" data-type="product-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/basic_product_overview.png"><img src="images/application/product_management/basic_product_overview.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic product overview" /></a>
+                            <div class="caption">
+                              <p>basic product overview</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_product_info.png"><img src="images/application/product_management/dress_product_info.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product" /></a>
-                          <div class="caption">
-                            <p>dress product</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-3" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_category.png"><img src="images/application/product_management/dress_category.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress category" /></a>
+                            <div class="caption">
+                              <p>dress category</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_colorway.png"><img src="images/application/product_management/dress_colorway.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product colorway" /></a>
-                          <div class="caption">
-                            <p>dress product colorway</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-4" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_product_info.png"><img src="images/application/product_management/dress_product_info.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product" /></a>
+                            <div class="caption">
+                              <p>dress product</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_pattern_1.png"><img src="images/application/product_management/dress_pattern_1.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product patterns" /></a>
-                          <div class="caption">
-                            <p>dress product patterns</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-5" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_colorway.png"><img src="images/application/product_management/dress_colorway.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product colorway" /></a>
+                            <div class="caption">
+                              <p>dress product colorway</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_pattern_2.png"><img src="images/application/product_management/dress_pattern_2.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product patterns" /></a>
-                          <div class="caption">
-                            <p>dress product patterns</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-6" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_pattern_1.png"><img src="images/application/product_management/dress_pattern_1.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product patterns" /></a>
+                            <div class="caption">
+                              <p>dress product patterns</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_colors_1.png"><img src="images/application/product_management/dress_colors_1.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product colors" /></a>
-                          <div class="caption">
-                            <p>dress product colors</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-7" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_pattern_2.png"><img src="images/application/product_management/dress_pattern_2.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product patterns" /></a>
+                            <div class="caption">
+                              <p>dress product patterns</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_colors_2.png"><img src="images/application/product_management/dress_colors_2.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product colors" /></a>
-                          <div class="caption">
-                            <p>dress product colors</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-8" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_colors_1.png"><img src="images/application/product_management/dress_colors_1.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product colors" /></a>
+                            <div class="caption">
+                              <p>dress product colors</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_product_overview.png"><img src="images/application/product_management/dress_product_overview.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product overview" /></a>
-                          <div class="caption">
-                            <p>dress product overview</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-9" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_colors_2.png"><img src="images/application/product_management/dress_colors_2.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product colors" /></a>
+                            <div class="caption">
+                              <p>dress product colors</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_product_feature_list.png"><img src="images/application/product_management/dress_product_feature_list.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product features list" /></a>
-                          <div class="caption">
-                            <p>dress product features list</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-10" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_product_overview.png"><img src="images/application/product_management/dress_product_overview.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product overview" /></a>
+                            <div class="caption">
+                              <p>dress product overview</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/dress_sizes.png"><img src="images/application/product_management/dress_sizes.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product sizes" /></a>
-                          <div class="caption">
-                            <p>dress product sizes</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-11" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_product_feature_list.png"><img src="images/application/product_management/dress_product_feature_list.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product features list" /></a>
+                            <div class="caption">
+                              <p>dress product features list</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/instrumentation.png"><img src="images/application/product_management/instrumentation.png" class="img-responsive img-center img-thumbnail" alt="Product management - instrumentation product" /></a>
-                          <div class="caption">
-                            <p>instrumentation product</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-12" data-type="fashion-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/dress_sizes.png"><img src="images/application/product_management/dress_sizes.png" class="img-responsive img-center img-thumbnail" alt="Product management - dress product sizes" /></a>
+                            <div class="caption">
+                              <p>dress product sizes</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/instrumentation_overview.png"><img src="images/application/product_management/instrumentation_overview.png" class="img-responsive img-center img-thumbnail" alt="Product management - instrumentation product overview" /></a>
-                          <div class="caption">
-                            <p>instrumentation product overview</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-13" data-type="instrumentation-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/instrumentation.png"><img src="images/application/product_management/instrumentation.png" class="img-responsive img-center img-thumbnail" alt="Product management - instrumentation product" /></a>
+                            <div class="caption">
+                              <p>instrumentation product</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/instrumentation_dimensions.png"><img src="images/application/product_management/instrumentation_dimensions.png" class="img-responsive img-center img-thumbnail" alt="Product management - instrumentation product dimensions" /></a>
-                          <div class="caption">
-                            <p>instrumentation product dimensions</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-14" data-type="instrumentation-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/instrumentation_overview.png"><img src="images/application/product_management/instrumentation_overview.png" class="img-responsive img-center img-thumbnail" alt="Product management - instrumentation product overview" /></a>
+                            <div class="caption">
+                              <p>instrumentation product overview</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/service_info.png"><img src="images/application/product_management/service_info.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic service" /></a>
-                          <div class="caption">
-                            <p>basic service</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-15" data-type="instrumentation-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/instrumentation_dimensions.png"><img src="images/application/product_management/instrumentation_dimensions.png" class="img-responsive img-center img-thumbnail" alt="Product management - instrumentation product dimensions" /></a>
+                            <div class="caption">
+                              <p>instrumentation product dimensions</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-6 col-lg-3">
-                        <div class="thumbnail">
-                          <a rel="lightbox[pm-group]" href="images/application/product_management/services_list.png"><img src="images/application/product_management/services_list.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic services list" /></a>
-                          <div class="caption">
-                            <p>basic services list</p>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-16" data-type="service-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/service_info.png"><img src="images/application/product_management/service_info.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic service" /></a>
+                            <div class="caption">
+                              <p>basic service</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 product-management-item" data-id="id-17" data-type="service-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[pm-group]" href="images/application/product_management/services_list.png"><img src="images/application/product_management/services_list.png" class="img-responsive img-center img-thumbnail" alt="Product management - basic services list" /></a>
+                            <div class="caption">
+                              <p>basic services list</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
                     </div>
-                    <p class="pull-right"><a href="#" class="btn btn-primary btn-xs all-galleries-link">back to all galleries</a></p>
                   </div>
+                  <!-- END PRODUCT MANAGEMENET IMAGES GALLERY  -->
                   
+                  <!-- START INVENTORY MANAGEMENET IMAGES GALLERY  -->
+                  <div id="inventory-management-gallery" class="single-feature-gallery hidden">
+                    <h3 class="blue">Inventory management</h3>
+                    <p class="spacer10">&nbsp;</p>
+                    <div class="row" class="">
+                      <div class="col-xs-12">
+                        <ul class="nav nav-pills inventory-management-item-filter">
+                          <li class="all active"><a href="#">all</a></li>
+                          <li class="browse-inventory-item"><a href="#">browse inventory</a></li>
+                          <li class="items-item"><a href="#">items</a></li>
+                          <li class="locations-item"><a href="#">locations</a></li>
+                          <li class="labels-item"><a href="#">labels</a></li>
+                        </ul>
+                        <p class="spacer20">&nbsp;</p>
+                      </div>
+                      <div class="clearfix"></div>
+                      <ul id="inventory-management-items" class="single-feature-items">
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-0" data-type="browse-inventory-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/inventory_dashboard.png"><img src="images/application/inventory_management/inventory_dashboard.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - inventory dashboard" /></a>
+                            <div class="caption">
+                              <p>inventory dashboard</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-1" data-type="browse-inventory-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/view_inventory.png"><img src="images/application/inventory_management/view_inventory.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - view inventory" /></a>
+                            <div class="caption">
+                              <p>view inventory</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-2" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_items_1.png"><img src="images/application/inventory_management/create_items_1.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create items" /></a>
+                            <div class="caption">
+                              <p>create items</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-3" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_items_2.png"><img src="images/application/inventory_management/create_items_2.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create items" /></a>
+                            <div class="caption">
+                              <p>create items</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-4" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_items_3.png"><img src="images/application/inventory_management/create_items_3.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create items" /></a>
+                            <div class="caption">
+                              <p>create items</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-5" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_items_4.png"><img src="images/application/inventory_management/create_items_4.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create items" /></a>
+                            <div class="caption">
+                              <p>create items</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-6" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/allocate_items.png"><img src="images/application/inventory_management/allocate_items.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - allocate items" /></a>
+                            <div class="caption">
+                              <p>allocate items</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-7" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/item_properties.png"><img src="images/application/inventory_management/item_properties.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - item properties" /></a>
+                            <div class="caption">
+                              <p>item properties</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-8" data-type="items-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/deleted_items.png"><img src="images/application/inventory_management/deleted_items.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - deleted items" /></a>
+                            <div class="caption">
+                              <p>deleted items</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-9" data-type="locations-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/view_locations.png"><img src="images/application/inventory_management/view_locations.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - view locations" /></a>
+                            <div class="caption">
+                              <p>view locations</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-10" data-type="locations-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/manage_locations.png"><img src="images/application/inventory_management/manage_locations.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - manage locations" /></a>
+                            <div class="caption">
+                              <p>manage locations</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-11" data-type="locations-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_bin_locations_1.png"><img src="images/application/inventory_management/create_bin_locations_1.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create bin locations" /></a>
+                            <div class="caption">
+                              <p>create bin locations</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-12" data-type="locations-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_bin_locations_2.png"><img src="images/application/inventory_management/create_bin_locations_2.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create bin locations" /></a>
+                            <div class="caption">
+                              <p>create bin locations</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-13" data-type="labels-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/create_labels.png"><img src="images/application/inventory_management/create_labels.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - create labels" /></a>
+                            <div class="caption">
+                              <p>create labels</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 inventory-management-item" data-id="id-14" data-type="labels-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[im-group]" href="images/application/inventory_management/print_labels.png"><img src="images/application/inventory_management/print_labels.png" class="img-responsive img-center img-thumbnail" alt="Inventory management - print labels" /></a>
+                            <div class="caption">
+                              <p>print labels</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <!-- END INVENTORY MANAGEMENET IMAGES GALLERY  -->
                   
+                  <!-- START CUSTOMER MANAGEMENET IMAGES GALLERY  -->
+                  <div id="customer-management-gallery" class="single-feature-gallery hidden">
+                    <h3 class="blue">Customers management</h3>
+                    <p class="spacer10">&nbsp;</p>
+                    <div class="row" class="">
+                      <div class="col-xs-12">
+                        <ul class="nav nav-pills customer-management-item-filter">
+                          <li class="all active"><a href="#">all</a></li>
+                          <li class="customers-item"><a href="#">customers dashboard</a></li>
+                          <li class="my-customers-item"><a href="#">my customers</a></li>
+                          <li class="sales-offers-item"><a href="#">sales offers</a></li>
+                          <li class="sales-orders-item"><a href="#">sales orders</a></li>
+                          <li class="sales-invoices-item"><a href="#">sales invoices</a></li>
+                        </ul>
+                        <p class="spacer20">&nbsp;</p>
+                      </div>
+                      <div class="clearfix"></div>
+                      <ul id="customer-management-items" class="single-feature-items">
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-0" data-type="customers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/1.png"><img src="images/application/sales_management/1.png" class="img-responsive img-center img-thumbnail" alt="Customers management - customers dashboard" /></a>
+                            <div class="caption">
+                              <p>customers dashboard</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-1" data-type="my-customers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/2.png"><img src="images/application/sales_management/2.png" class="img-responsive img-center img-thumbnail" alt="Customers management - my customers" /></a>
+                            <div class="caption">
+                              <p>my customers</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-2" data-type="my-customers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/3.png"><img src="images/application/sales_management/3.png" class="img-responsive img-center img-thumbnail" alt="Customers management - my customers" /></a>
+                            <div class="caption">
+                              <p>my customers</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-3" data-type="sales-offers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/4.png"><img src="images/application/sales_management/4.png" class="img-responsive img-center img-thumbnail" alt="Customers management - offers" /></a>
+                            <div class="caption">
+                              <p>offers</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-4" data-type="sales-offers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/5.png"><img src="images/application/sales_management/5.png" class="img-responsive img-center img-thumbnail" alt="Customers management - offer revisions" /></a>
+                            <div class="caption">
+                              <p>offer revisions</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-5" data-type="sales-offers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/6.png"><img src="images/application/sales_management/6.png" class="img-responsive img-center img-thumbnail" alt="Customers management - offer terms" /></a>
+                            <div class="caption">
+                              <p>offer terms</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-6" data-type="sales-offers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/7.png"><img src="images/application/sales_management/7.png" class="img-responsive img-center img-thumbnail" alt="Customers management - offer messages" /></a>
+                            <div class="caption">
+                              <p>offer messages</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-7" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/8.png"><img src="images/application/sales_management/8.png" class="img-responsive img-center img-thumbnail" alt="Customers management - orders" /></a>
+                            <div class="caption">
+                              <p>orders</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-8" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/9.png"><img src="images/application/sales_management/9.png" class="img-responsive img-center img-thumbnail" alt="Customers management - create order" /></a>
+                            <div class="caption">
+                              <p>create order</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-9" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/10.png"><img src="images/application/sales_management/10.png" class="img-responsive img-center img-thumbnail" alt="Customers management - create order" /></a>
+                            <div class="caption">
+                              <p>create order</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-10" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/11.png"><img src="images/application/sales_management/11.png" class="img-responsive img-center img-thumbnail" alt="Customers management - order details" /></a>
+                            <div class="caption">
+                              <p>order details</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-11" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/12.png"><img src="images/application/sales_management/12.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add orderline" /></a>
+                            <div class="caption">
+                              <p>add orderline</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-12" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/13.png"><img src="images/application/sales_management/13.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add orderline from inventory" /></a>
+                            <div class="caption">
+                              <p>add orderline from inventory</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-13" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/14.png"><img src="images/application/sales_management/14.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add orderline from inventory" /></a>
+                            <div class="caption">
+                              <p>add orderline from inventory</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-14" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/15.png"><img src="images/application/sales_management/15.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add orderline from products" /></a>
+                            <div class="caption">
+                              <p>add orderline from products</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-15" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/16.png"><img src="images/application/sales_management/16.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add orderline from products" /></a>
+                            <div class="caption">
+                              <p>add orderline from products</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-16" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/17.png"><img src="images/application/sales_management/17.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add discounts" /></a>
+                            <div class="caption">
+                              <p>add discounts</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-17" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/18.png"><img src="images/application/sales_management/18.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add charges" /></a>
+                            <div class="caption">
+                              <p>add charges</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-18" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/19.png"><img src="images/application/sales_management/19.png" class="img-responsive img-center img-thumbnail" alt="Customers management - add taxes" /></a>
+                            <div class="caption">
+                              <p>add taxes</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-19" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/20.png"><img src="images/application/sales_management/20.png" class="img-responsive img-center img-thumbnail" alt="Customers management - order terms" /></a>
+                            <div class="caption">
+                              <p>order terms</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-20" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/21.png"><img src="images/application/sales_management/21.png" class="img-responsive img-center img-thumbnail" alt="Customers management - order shipping" /></a>
+                            <div class="caption">
+                              <p>order shipping</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-21" data-type="sales-orders-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/22.png"><img src="images/application/sales_management/22.png" class="img-responsive img-center img-thumbnail" alt="Customers management - order history" /></a>
+                            <div class="caption">
+                              <p>order history</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-22" data-type="sales-invoices-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/23.png"><img src="images/application/sales_management/23.png" class="img-responsive img-center img-thumbnail" alt="Customers management - invoices" /></a>
+                            <div class="caption">
+                              <p>invoices</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 customer-management-item" data-id="id-23" data-type="sales-invoices-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[cm-group]" href="images/application/sales_management/24.png"><img src="images/application/sales_management/24.png" class="img-responsive img-center img-thumbnail" alt="Customers management - invoice revisions" /></a>
+                            <div class="caption">
+                              <p>invoice revisions</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <!-- END CUSTOMER MANAGEMENET IMAGES GALLERY  -->
                   
-                  
-                  
+                  <!-- START SUPPLIER MANAGEMENET IMAGES GALLERY  -->
+                  <div id="supplier-management-gallery" class="single-feature-gallery hidden">
+                    <h3 class="blue">Suppliers management</h3>
+                    <p class="spacer10">&nbsp;</p>
+                    <div class="row" class="">
+                      <div class="col-xs-12">
+                        <ul class="nav nav-pills supplier-management-item-filter">
+                          <li class="all active"><a href="#">all</a></li>
+                          <li class="supplier-dashboard-item"><a href="#">suppliers dashboard</a></li>
+                          <li class="my-suppliers-item"><a href="#">my suppliers</a></li>
+                          <li class="logistic-providers-item"><a href="#">logistic providers</a></li>
+                        </ul>
+                        <p class="spacer20">&nbsp;</p>
+                      </div>
+                      <div class="clearfix"></div>
+                      <ul id="supplier-management-items" class="single-feature-items">
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-0" data-type="supplier-dashboard-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/suppliers_dashboard.png"><img src="images/application/suppliers_management/suppliers_dashboard.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - suppliers dashboard" /></a>
+                            <div class="caption">
+                              <p>suppliers dashboard</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-1" data-type="my-suppliers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/my_suppliers.png"><img src="images/application/suppliers_management/my_suppliers.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - my suppliers" /></a>
+                            <div class="caption">
+                              <p>my suppliers</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-2" data-type="my-suppliers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/supplier_details.png"><img src="images/application/suppliers_management/supplier_details.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - supplier details" /></a>
+                            <div class="caption">
+                              <p>supplier details</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-3" data-type="my-suppliers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/supplier_company_details.png"><img src="images/application/suppliers_management/supplier_company_details.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - supplier company details" /></a>
+                            <div class="caption">
+                              <p>supplier company details</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-4" data-type="my-suppliers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/supplier_payment_details.png"><img src="images/application/suppliers_management/supplier_payment_details.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - supplier payment details" /></a>
+                            <div class="caption">
+                              <p>supplier payment details</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-5" data-type="logistic-providers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/create_logistic_provider.png"><img src="images/application/suppliers_management/create_logistic_provider.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - create logistic provider" /></a>
+                            <div class="caption">
+                              <p>create logistic provider</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-6" data-type="logistic-providers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/add_shipping_services.png"><img src="images/application/suppliers_management/add_shipping_services.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - add shipping services" /></a>
+                            <div class="caption">
+                              <p>add shipping services</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="col-xs-12 col-md-6 col-lg-3 supplier-management-item" data-id="id-7" data-type="logistic-providers-item">
+                          <div class="thumbnail">
+                            <a rel="lightbox[sm-group]" href="images/application/suppliers_management/logistic_providers.png"><img src="images/application/suppliers_management/logistic_providers.png" class="img-responsive img-center img-thumbnail" alt="Suppliers management - all logistics providers" /></a>
+                            <div class="caption">
+                              <p>all logistic providers</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <!-- END SUPPLIER MANAGEMENET IMAGES GALLERY  -->
                   
                   
                 </div>
@@ -466,27 +922,12 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/jquery.prettyPhoto.js"></script>
-        <script src="scripts/main.js"></script>
-        <script>
-
-            $(document).ready(function(){
-                $("[rel^='lightbox']").prettyPhoto({
-                  social_tools: false
-                });
-              $('#product-management-gallery-link').on('click', function(e){
-                e.preventDefault();
-                $('#all-galleries').toggleClass('hidden');
-                $('#product-management-gallery').toggleClass('hidden');
-              });
-              $('.all-galleries-link').on('click', function(e){
-                e.preventDefault();
-                $('#all-galleries').toggleClass('hidden');
-                $('#product-management-gallery').toggleClass('hidden');
-              });
-            });
-        </script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/vendor/jquery.quicksand.js"></script>
+    <script src="scripts/vendor/jquery.easing.js"></script>
+    <script src="scripts/vendor/jquery.prettyPhoto.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/see-it-in-action.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
