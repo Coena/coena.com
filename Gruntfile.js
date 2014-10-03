@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= config.app %>/scripts/{,*/}*.js'],
+        files: ['<%= config.app %>/scripts/**/*.*'],
         tasks: ['jshint'],
         options: {
           livereload: true
@@ -135,6 +135,7 @@ module.exports = function (grunt) {
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
         '!<%= config.app %>/scripts/vendor/*',
+        '!<%= config.app %>/scripts/plugins/*',
         'test/spec/{,*/}*.js'
       ]
     },
@@ -208,7 +209,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/scripts/**/*.*',
             '<%= config.dist %>/styles/{,*/}*.css',
             '<%= config.dist %>/images/**/*.*',
             '<%= config.dist %>/styles/fonts/{,*/}*.*',
@@ -362,7 +363,7 @@ module.exports = function (grunt) {
         outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/scripts/**/*.*',
             '<%= config.dist %>/styles/{,*/}*.css',
             '!<%= config.dist %>/scripts/vendor/*'
           ]
