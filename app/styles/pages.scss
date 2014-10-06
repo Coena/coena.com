@@ -56,7 +56,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 
 /* Products - overview */
-#products {
+#products,
+#solutions,
+#contact {
   background-color: $light-grey-color;
   
   .banner-holder {
@@ -91,6 +93,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     }
     &.solutions-benefits {
       background-image: url(../images/solutions-benefits.jpg) !important;
+    }
+    &.solutions-large-business {
+      background-image: url(../images/solutions-large-business.jpg) !important;
+    }
+    &.solutions-small-business {
+      background-image: url(../images/solutions-small-business.jpg) !important;
+    }
+    &.contact {
+      background-image: url(../images/contact.jpg) !important;
     }
   }
 }
