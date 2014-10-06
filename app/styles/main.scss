@@ -264,6 +264,15 @@ a.green {
   line-height: 1;
 }
 
+.round-number {
+  border-radius: 50px;
+  background-color: $gray-dark;
+  color: $white-color;
+  width: 25px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
 .box-shadow-5 {
   box-shadow: 0 0 5px rgba(0,0,0,0.35);
 }
@@ -272,3 +281,10 @@ a.green {
   border-radius: 10px;
 }
 
+.max-width-300 {
+  max-width: 300px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
