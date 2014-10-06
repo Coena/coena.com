@@ -67,6 +67,11 @@ var ResponsiveBootstrapToolkit = (function($){
       var smallColContentHeight = $('#contents section').height() - 176 + 'px';
       $('#contents section > .container-fluid .columns-container').css('max-height', smallColContentHeight);
     }
+    if (viewport.is('md') || viewport.is('lg')) {
+      $('#solutions-benefits-tabs').addClass('tabs-left');
+    } else {
+      $('#solutions-benefits-tabs').removeClass('tabs-left');
+    }
   }
 
   // Executes once whole document has been loaded

@@ -89,6 +89,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     &.solutions-what-we-solve {
       background-image: url(../images/solutions-what-we-solve.jpg) !important;
     }
+    &.solutions-benefits {
+      background-image: url(../images/solutions-benefits.jpg) !important;
+    }
   }
 }
 
@@ -122,6 +125,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     padding: 0;
     li {
       list-style: none;
+    }
+  }
+}
+
+//solutions benefits tabs
+#solutions-benefits-tabs {
+  &.tabs-left {
+    > .nav-tabs {
+      margin-right: 25px;
+      border-right: 0;
+      > li.active > a {
+        border: 0;
+        border-right: 1px solid $table-border-color;
+      }
     }
   }
 }
