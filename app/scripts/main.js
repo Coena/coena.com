@@ -181,14 +181,40 @@ function sortGallery(item) {
 
 $(document).ready(function(){
   lightbox();
+  //product management gallery
   gallery('#product-management-gallery');
   sortGallery('product-management-item');
+  //inventory management gallery
   gallery('#inventory-management-gallery');
   sortGallery('inventory-management-item');
+  //customers management gallery
   gallery('#customer-management-gallery');
   sortGallery('customer-management-item');
+  //suppliers management gallery
   gallery('#supplier-management-gallery');
   sortGallery('supplier-management-item');
+  //business archive and settings gallery
+  gallery('#business-archive-and-settings-gallery');
+  sortGallery('business-archive-and-settings-item');
+  //advertisement management gallery
+  gallery('#advertisement-management-gallery');
+  sortGallery('advertisement-management-item');
+  //marketplace and showroom gallery
+  gallery('#marketplace-and-showroom-gallery');
+  sortGallery('marketplace-and-showroom-item');
+  //bsuiness communication gallery
+  gallery('#business-communication-gallery');
+  sortGallery('business-communication-item');
+  //system configuration gallery
+  gallery('#system-configuration-gallery');
+  sortGallery('system-configuration-item');
+  
+  //return to all galleries from single gallery
+  $('.back-to-galleries').on('click', function (e) {
+    e.preventDefault();
+    $('.single-feature-gallery').addClass('hidden');
+    $('#all-galleries').removeClass('hidden');
+  });
 });
 
 
