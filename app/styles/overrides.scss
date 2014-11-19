@@ -1,12 +1,8 @@
 $fa-font-path: "fonts/bower_components/fontawesome/fonts";
-@import "fontawesome/scss/font-awesome";
 $rs-font-path: "fonts/bower_components/roboto-slab-fontface/fonts";
-@import "roboto-slab-fontface/roboto-slab-fontface";
 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 
 @import 'mixins';
 @import 'variables';

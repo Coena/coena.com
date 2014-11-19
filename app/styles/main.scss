@@ -1,15 +1,11 @@
 $fa-font-path: "fonts/bower_components/fontawesome/fonts";
-@import "fontawesome/scss/font-awesome";
 $rs-font-path: "fonts/bower_components/roboto-slab-fontface/fonts";
-@import "roboto-slab-fontface/roboto-slab-fontface";
 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 //Color overrides
 $brand-primary: #00adee;
 $brand-success: #69c593;
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 
 @import 'mixins';
 @import 'variables';
