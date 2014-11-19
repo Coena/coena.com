@@ -131,9 +131,14 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding: 19px 0;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  background-color: white;
+  font-size: 12px;
+  z-index: 1;
 }
 
 .columns-title {

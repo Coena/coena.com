@@ -158,7 +158,7 @@ h5 {
 .row-full-height {
   height: 100%;
   [class*="col-"] {
-    height: 100%;
+    height: calc(100% - 16px);
   }
 }
 
