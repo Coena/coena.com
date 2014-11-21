@@ -1,12 +1,16 @@
-$fa-font-path: "fonts/bower_components/fontawesome/fonts";
-$rs-font-path: "fonts/bower_components/roboto-slab-fontface/fonts";
-
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 //Color overrides
 $brand-primary: #00adee;
 $brand-success: #69c593;
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 
+
+$font-path: '/styles/fonts/';
+$icon-font-path: $font-path;
+$fa-font-path: $font-path;
+
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+@import '../bower_components/font-awesome/scss/font-awesome';
+
+@import 'fonts';
 @import 'mixins';
 @import 'variables';
 @import 'pages';
@@ -25,11 +29,14 @@ $lg: 1200px;
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+html, body {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
 body {
-  font-family: 'Roboto_Slab';
-  font-weight: 400;
-  font-style: normal;
   > .container-fluid {
     padding: 0;
   }
